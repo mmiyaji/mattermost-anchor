@@ -1,0 +1,17 @@
+:root { color-scheme: light dark; --accent: #2b5797; }
+body { font: 14px/1.5 system-ui, sans-serif; margin: 0; }
+main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 22px; margin: 0; }
+h2 { font-size: 15px; margin: 24px 0 8px; }
+.lead { margin: 4px 0 0; opacity: .75; }
+input[type=url], input[type=text] { width: 100%; box-sizing: border-box; padding: 8px; font: inherit; }
+button { font: inherit; padding: 7px 14px; cursor: pointer; }
+button.primary { background: var(--accent); color: #fff; border: 0; border-radius: 4px; }
+.row { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+.hint { font-size: 12px; opacity: .7; margin: 6px 0 0; }
+.categories { display: grid; gap: 4px; }
+.categories h3 { font-size: 12px; text-transform: uppercase; opacity: .7; margin: 10px 0 2px; }
+.categories label { display: flex; gap: 8px; align-items: center; padding: 4px 0; }
+.check { display: flex; gap: 8px; align-items: center; }
+details { margin-top: 12px; }
+#status.error { color: #c0392b; }

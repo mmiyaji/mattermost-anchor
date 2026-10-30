@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mattermost Anchor</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>Mattermost Anchor</h1>
+    <p class="lead">Pin one sidebar category above <b>Unreads</b>.</p>
+
+    <section>
+      <h2>1. Server</h2>
+      <label for="serverUrl">Mattermost server URL</label>
+      <input id="serverUrl" type="url" placeholder="https://mattermost.example.com" autocomplete="off">
+      <div class="row">
+        <button id="load" type="button">Grant access &amp; load categories</button>
+      </div>
+      <p class="hint">Chrome will ask permission for this origin only. Your logged-in Mattermost session is used (read-only GET requests).</p>
+    </section>
+
+    <section>
+      <h2>2. Category to pin</h2>
+      <div id="categories" class="categories" role="radiogroup" aria-label="Category to pin"></div>
+      <details>
+        <summary>Enter a category ID manually</summary>
+        <input id="manualId" type="text" placeholder="category id" autocomplete="off" spellcheck="false">
+        <p class="hint">Use this if loading fails. The ID comes from <code>GET /api/v4/users/me/teams/{team_id}/channels/categories</code>.</p>
+      </details>
+    </section>
+
+    <section>
+      <label class="check"><input id="enabled" type="checkbox" checked> Enabled</label>
+      <div class="row">
+        <button id="save" type="button" class="primary">Save</button>
+        <span id="status" role="status"></span>
+      </div>
+      <p class="hint">After saving for the first time, reload your Mattermost tab. Only one category can be pinned; Unreads stays above all the others.</p>
+    </section>
+  </main>
+  <script src="lib/anchor.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

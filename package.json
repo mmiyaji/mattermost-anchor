@@ -1,0 +1,12 @@
+{
+  "name": "mattermost-anchor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pin one sidebar category above Unreads in Mattermost (CSS only).",
+  "license": "MIT",
+  "author": "mmiyaji",
+  "scripts": {
+    "test": "node --test",
+    "icons": "node scripts/gen-icons.js"
+  }
+}

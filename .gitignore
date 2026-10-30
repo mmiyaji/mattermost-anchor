@@ -1,0 +1,6 @@
+node_modules/
+*.zip
+*.zip.sha256
+.env
+.DS_Store
+Thumbs.db
